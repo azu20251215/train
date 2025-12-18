@@ -1,21 +1,17 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+/* === 修正：正方形マップ用サイズ === */
 const TILE = 30;
 const MAP_W = 10;
-const MAP_H = 16;
+const MAP_H = 10;
+/* === 修正ここまで === */
 
 const map = [
   "##########",
   "#........#",
   "#........#",
   "#..####..#",
-  "#........#",
-  "#........#",
-  "#........#",
-  "#..####..#",
-  "#........#",
-  "#........#",
   "#........#",
   "#........#",
   "#..####..#",
@@ -65,7 +61,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowRight") move(1, 0);
 });
 
-// スマホ操作
+// スマホ操作（スワイプ）
 let sx = 0, sy = 0;
 canvas.addEventListener("touchstart", e => {
   sx = e.touches[0].clientX;
