@@ -3,8 +3,11 @@ body {
   background: #111;
   color: #fff;
   font-family: sans-serif;
+
   display: flex;
   justify-content: center;
+  align-items: center;       /* 縦中央 */
+  min-height: 100vh;
 }
 
 #wrapper {
@@ -13,15 +16,32 @@ body {
   padding: 8px;
 }
 
+/* === 修正：canvasを正方形前提で表示 === */
 canvas {
   width: 100%;
+  aspect-ratio: 1 / 1;
   background: #222;
   border: 2px solid #555;
   display: block;
 }
+/* === 修正ここまで === */
 
 #info {
   margin-top: 8px;
   font-size: 14px;
   text-align: center;
 }
+
+/* === 追加：スマホ横持ち対応 === */
+@media (orientation: landscape) {
+  #wrapper {
+    max-width: none;
+    width: auto;
+  }
+
+  canvas {
+    height: 80vh;
+    width: auto;
+  }
+}
+/* === 追加ここまで === */
