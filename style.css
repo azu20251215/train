@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 8px;
+}
+
+canvas {
+  width: 100%;
+  background: #222;
+  border: 2px solid #555;
+  display: block;
+}
+
+#info {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+}
